@@ -1,0 +1,9 @@
+.titlebar{
+	height: 20em;
+	background-color: #000;
+}
+
+.titlebar-text{
+	text-align: center;
+	size: 15em;
+}
