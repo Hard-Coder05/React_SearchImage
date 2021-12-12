@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import TitleBar from './UI/TitleBar/TitleBar';
+import "./ScrollComponent.css";
 
 class ScrollComponent extends Component {
   constructor() {
@@ -62,7 +64,8 @@ componentDidMount() {
     const loadingTextCSS = { display: this.state.loading ? "block" : "none" };
 
     return (
-      <div className="container">
+      <div className="main-container">
+		<TitleBar/>
         <div style={{ minHeight: "800px" }}>
           {this.state.photos.map(user => (
             // eslint-disable-next-line jsx-a11y/alt-text

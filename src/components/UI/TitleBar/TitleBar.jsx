@@ -4,7 +4,7 @@ function TitleBar(){
 return (
 <div className='titlebar'>
 	<div className='titlebar-text'>
-		Search Infinite Image
+		Search Infinite Images
 	</div>
 </div>
 );

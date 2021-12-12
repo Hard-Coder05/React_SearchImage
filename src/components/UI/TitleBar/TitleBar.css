@@ -1,9 +1,11 @@
 .titlebar{
-	height: 20em;
-	background-color: #000;
+	height: 10em; 
+	background-color: #000; 
 }
 
 .titlebar-text{
 	text-align: center;
-	size: 15em;
+	font-size: 5em;
+	color: white;
+	font-family: 'Courier New', Courier, monospace;
 }
