@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import TitleBar from './UI/TitleBar/TitleBar';
-import "./ScrollComponent.css";
+import "./ScrollComponent.css"; 
 
 class ScrollComponent extends Component {
   constructor() {
@@ -65,19 +65,25 @@ componentDidMount() {
 
     return (
       <div className="main-container">
-		<TitleBar/>
-        <div style={{ minHeight: "800px" }}>
-          {this.state.photos.map(user => (
-            // eslint-disable-next-line jsx-a11y/alt-text
-            <img src={user.previewURL} key={user.id} />
-          ))}
-        </div>
-        <div
-          ref={loadingRef => (this.loadingRef = loadingRef)}
-          style={loadingCSS}
-        >
-          <span style={loadingTextCSS}>Loading...</span>
-        </div>
+		<div className='content-area'>
+			<TitleBar/>
+			<div className='gallery-area'>
+			{this.state.photos.map(user => (
+				<div className='image-tile' key={user.id}>
+				<img src={user.largeImageURL} alt={user.id} style={{width:"100%"}}/>
+				<div className='text-tile'>
+					<p>Image id: {user.id}</p>
+				</div>
+			</div>
+			))}
+			</div>
+			<div
+			ref={loadingRef => (this.loadingRef = loadingRef)}
+			style={loadingCSS}
+			>
+			<span style={loadingTextCSS}>Loading...</span>
+			</div>
+		</div>
       </div>
     );
   }

@@ -1,5 +1,26 @@
 .main-container{
-	background-color: grey;
-	width: 75%;
+	background-color: #294aa5	; 
+}
+
+.content-area{
 	margin: auto;
+	width: 75%;
+}
+
+.gallery-area{
+	background-color:#ebefff; 
+}
+
+div.image-tile {
+	margin: auto;
+	margin-top: 12px;
+	width: 50%;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom: 25px;
+  }
+  
+  div.text-tile {
+	text-align: center;
+	padding: 10px 20px;
 }
